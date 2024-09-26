@@ -1,0 +1,13 @@
+# service.yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: fresh-app-service
+spec:
+  selector:
+    app: fresh-app
+  ports:
+  - port: 8080
+    targetPort: 80
+  type: LoadBalancer
