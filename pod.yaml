@@ -12,7 +12,8 @@ spec:
     image: BillTestContainerRegistry.azurecr.io/fresh-app:latest
     resources:
       limits:
-        memory: "1Gi"
-        cpu: "1"
+        memory: "512Mi"
+        cpu: "500m"
     ports:
       - containerPort: 80
+      
