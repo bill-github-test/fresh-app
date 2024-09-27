@@ -1,0 +1,22 @@
+# deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fresh-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fresh-app
+  template:
+    metadata:
+      labels:
+        app: fresh-app
+    spec:
+      containers:
+      - name: fresh-app-container
+        image: BillTestContainerRegistry.azurecr.io/fresh-app:latest
+        ports:
+        - containerPort: 80
+      
